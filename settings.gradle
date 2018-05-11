@@ -1,0 +1,4 @@
+rootProject.name = 'pro-spring-5'
+include 'chapter02'
+findProject(':chapter02')?.name = 'ch02'
+

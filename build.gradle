@@ -1,0 +1,27 @@
+ext {
+    springVersion = '5.0.7.BUILD-SNAPSHOT'
+    
+    spring = [
+            context : "org.springframework:spring-context:$springVersion"
+    ]
+}
+
+subprojects {
+    version '0.1-SNAPSHOT'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url 'https://repo.spring.io/libs-snapshot'
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.7'
+}
