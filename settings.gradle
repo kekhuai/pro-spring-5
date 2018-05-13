@@ -1,4 +1,5 @@
 rootProject.name = 'pro-spring-5'
 include 'chapter02'
 findProject(':chapter02')?.name = 'ch02'
-
+include 'chapter03'
+findProject(':chapter03')?.name = 'ch03'

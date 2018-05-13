@@ -1,0 +1,23 @@
+version 'unspecified'
+
+apply plugin: 'java'
+
+sourceCompatibility = 9
+
+task copyDependencies(type: Copy) {
+    from configurations.compile
+    into 'build/libs'
+}
+
+dependencies {
+    compile spring.context
+}
+
+jar {
+    manifest {
+        attributes(
+                "Main-Class" : "xyz.kekhuay.prospring5.ch03.XmlConfigWithBeanFactory",
+                "Class-Path" : configurations.compile.collect { it.getName() }.join(' ')
+        )
+    }
+}

@@ -1,5 +1,7 @@
 ext {
     springVersion = '5.0.7.BUILD-SNAPSHOT'
+    junitVersion = '4.12'
+    assertjVersion = '3.9.1'
     
     spring = [
             context : "org.springframework:spring-context:$springVersion"
@@ -8,6 +10,16 @@ ext {
 
 subprojects {
     version '0.1-SNAPSHOT'
+    
+    apply plugin: "java"
+    apply plugin: "eclipse"
+    
+    eclipse {
+        classpath {
+            downloadJavadoc = true
+            downloadSources = true
+        }
+    }
 
     repositories {
         mavenLocal()
@@ -15,6 +27,11 @@ subprojects {
         maven {
             url 'https://repo.spring.io/libs-snapshot'
         }
+    }
+    
+    dependencies {
+        testCompile "junit:junit:$junitVersion"
+        testCompile "org.assertj:assertj-core:$assertjVersion"
     }
 }
 

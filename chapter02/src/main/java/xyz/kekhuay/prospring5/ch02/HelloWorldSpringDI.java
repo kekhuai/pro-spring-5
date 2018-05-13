@@ -7,5 +7,6 @@ public class HelloWorldSpringDI {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/app-context.xml");
         MessageRenderer mr = ctx.getBean("renderer", MessageRenderer.class);
         mr.render();
+        ctx.close();
     }
 }

@@ -2,3 +2,7 @@
 **/build/
 .idea/
 gradlew.bat
+**/.project
+**/.settings/
+**/bin
+**/.classpath
