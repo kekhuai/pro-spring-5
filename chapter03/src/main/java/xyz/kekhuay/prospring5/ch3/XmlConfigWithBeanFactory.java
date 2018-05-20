@@ -1,4 +1,4 @@
-package xyz.kekhuay.prospring5.ch03;
+package xyz.kekhuay.prospring5.ch3;
 
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;

@@ -1,4 +1,4 @@
-package xyz.kekhuay.prospring5.ch02;
+package xyz.kekhuay.prospring5.ch2;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

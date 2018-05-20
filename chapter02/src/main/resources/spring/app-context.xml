@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="provider" class="xyz.kekhuay.prospring5.ch02.HelloWorldMessageProvider" />
+    <bean id="provider" class="xyz.kekhuay.prospring5.ch2.HelloWorldMessageProvider" />
 
-    <bean id="renderer" class="xyz.kekhuay.prospring5.ch02.StandardOutMessageRenderer" p:messageProvider-ref="provider" />
+    <bean id="renderer" class="xyz.kekhuay.prospring5.ch2.StandardOutMessageRenderer" p:messageProvider-ref="provider" />
 </beans>

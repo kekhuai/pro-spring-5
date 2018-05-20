@@ -1,4 +1,4 @@
-package xyz.kekhuay.prospring5.ch02;
+package xyz.kekhuay.prospring5.ch2;
 
 public interface MessageRenderer {
     void render();

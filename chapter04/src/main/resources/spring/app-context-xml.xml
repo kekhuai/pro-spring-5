@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true">
+    
+    <bean id="singerOne" init-method="init" class="xyz.kekhuay.prospring5.ch4.Singer" p:name="John Mayer" p:age="39" />
+    <bean id="singerTwo" init-method="init" class="xyz.kekhuay.prospring5.ch4.Singer" p:age="72" />
+    <bean id="singerThree" init-method="init" class="xyz.kekhuay.prospring5.ch4.Singer" p:name="John Butler" />
+    
+    <bean id="shaDigest" class="xyz.kekhuay.prospring5.ch4.MessageDigestFactoryBean" p:algorithmName="SHA1" />
+    <bean id="defaultDigest" class="xyz.kekhuay.prospring5.ch4.MessageDigestFactoryBean" />
+    <bean id="digester" class="xyz.kekhuay.prospring5.ch4.MessageDigester" p:digest1-ref="shaDigest" p:digest2-ref="defaultDigest" />
+    
+    <bean id="publisher" class="xyz.kekhuay.prospring5.ch4.Publisher" />
+    <bean id="messageListener" class="xyz.kekhuay.prospring5.ch4.MessageEventListener" />
+</beans>
