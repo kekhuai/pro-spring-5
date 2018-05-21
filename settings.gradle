@@ -5,3 +5,6 @@ include 'chapter03'
 findProject(':chapter03')?.name = 'ch3'
 include 'chapter04'
 findProject(':chapter04')?.name = 'ch4'
+include 'chapter05'
+findProject(':chapter05')?.name = 'ch5'
+
