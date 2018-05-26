@@ -1,0 +1,11 @@
+plugins {
+    id "net.ltgt.errorprone" version "0.0.14"
+}
+
+dependencies {
+    compile project(':ch2')
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.1'
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjrt
+    compile group: 'org.aspectj', name: 'aspectjrt', version: '1.9.1'
+}
